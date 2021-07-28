@@ -8,12 +8,14 @@
 .services--alignment {
   display: flex;
   flex-wrap: wrap;
-  margin-right: calc(-1 * var(--gap));
 }
 .services__item {
   position: relative;
   flex-basis: calc(100% / 3 - var(--card-set-gap));
-  margin-right: var(--gap);
+
+  &:not(:last-child) {
+    margin-right: var(--gap);
+  }
 }
 .services__name {
   color: var(--color-basic);

@@ -9,16 +9,19 @@
 .advantages__item {
   @media screen and(min-width: 768px) {
     flex-basis: calc(100% / 2 - var(--gap));
-    margin-right: var(--gap);
     margin-bottom: var(--gap);
+    margin-right: var(--gap);
   }
+
   @media screen and(min-width: 1200px) {
     flex-basis: calc(100% / 4 - var(--gap));
   }
 }
+
 .advantages__item:not(:last-child) {
   margin-bottom: var(--gap);
 }
+
 .advantages__title {
   color: var(--color-titles);
   font-size: 14px;

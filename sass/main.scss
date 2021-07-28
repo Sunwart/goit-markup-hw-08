@@ -1,17 +1,17 @@
 @import './utils/variables'; // ++
 @import './base/general'; // ++
 @import './utils/visuallyHidden'; // ++
-@import './components/common';
+@import './components/common'; // ++
 @import './components/button'; // ++
 @import './components/logo'; // ++
-@import './components/header';
-@import './components/hero';
-@import './components/modalWindow';
-@import './components/modalForm';
+// @import './components/header';
+@import './components/hero'; // картинки не адаптовані!
+@import './components/modalWindow'; // вирівнювання
+@import './components/modalForm'; // ++
 @import './components/advantages'; // ++
 @import './components/services'; // ++
-@import './components/team';
+@import './components/team'; // картинки не адаптовані!
 @import './components/clients'; // ++
-@import './components/footer';
-@import './components/portfolioFilters';
-@import './components/portfolioItems';
+// @import './components/footer';
+@import './components/portfolioFilters'; // ++
+@import './components/portfolioItems'; // падінги оверлею, картинки не адаптовані, а з них - ширина

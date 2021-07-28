@@ -1,9 +1,17 @@
 .contact-form {
-  width: 448px;
+  width: 240px;
+
   padding: 40px 0;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+
+  @media screen and(min-width: 480px) {
+    width: 370px;
+  }
+  @media screen and(min-width: 1200px) {
+    width: 448px;
+  }
 }
 
 .contact-form--alignment {
@@ -106,9 +114,15 @@
   visibility: visible;
 }
 .contact-form__checkbox-text {
-  font-size: 14px;
-  line-height: 1.71;
+  font-size: 12px;
+  line-height: 0.86;
+
   letter-spacing: 0.03em;
+
+  @media screen and(min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 .contact-form__checkbox-link {
   color: var(--color-brand);
