@@ -1,41 +1,52 @@
 .portfolio {
-  margin-bottom: calc(-1 * var(--gap));
-
   @media screen and(min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: calc(-1 * var(--gap));
+    display: grid;
+    grid-gap: var(--gap);
+    grid-template-columns: repeat(2, 354px);
+  }
+
+  @media screen and(min-width: 1200px) {
+    grid-template-columns: repeat(3, 370px);
   }
 }
 
 .portfolio-item {
-  display: flex;
   position: relative;
-  margin-bottom: var(--gap);
   overflow: hidden;
-  transition: box-shadow var(--effect-duration) var(--timing-function);
+
+  &:not(:last-child) {
+    margin-bottom: var(--gap);
+  }
 
   @media screen and(min-width: 768px) {
-    flex-basis: calc(100% / 2 - var(--gap));
-    margin-right: var(--gap);
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
   }
 
-  @media screen and(min-width: 1200px) {
-    flex-basis: calc(100% / 3 - var(--gap));
-  }
+  transition: box-shadow var(--effect-duration) var(--timing-function);
 
   &:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
 
+  &__img {
+    width: 100%;
+  }
+
   &--legend {
-    flex-grow: 1;
-    flex-direction: column;
     padding: 20px 24px;
     border-bottom: 1px solid #eeeeee;
     border-left: 1px solid #eeeeee;
     border-right: 1px solid #eeeeee;
+
+    @media screen and(min-width: 768px) {
+      flex-grow: 1;
+      flex-direction: column;
+    }
   }
 
   &__project-name {
@@ -69,12 +80,24 @@
     padding: 24px;
     overflow: auto;
     transition: transform var(--effect-duration) var(--timing-function);
+
+    @media screen and(min-width: 480px) {
+      padding-top: 76px;
+    }
+    @media screen and(min-width: 768px) {
+      padding-top: 48px;
+    }
+    @media screen and(min-width: 1200px) {
+      padding-top: 62px;
+    }
   }
 }
 
 .project-item--link-wrapper {
-  display: flex;
-  flex-direction: column;
+  @media screen and(min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .project-item--img-wrapper {

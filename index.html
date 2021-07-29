@@ -27,20 +27,33 @@
           <a href="./index.html" class="header-logo"
             ><span class="logo--colored">Web</span>Studio</a
           >
+
+          <!-- <button
+            type="button"
+            class="menu-button is-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+              <use class="icon-close-menu" href="./images/menu_icons.svg#icon-close-menu"></use>
+              <use class="icon-menu" href="./images/menu_icons.svg#icon-menu"></use>
+            </svg>
+          </button> -->
+
           <ul class="header--alignment">
-            <li class="header--indent-right">
+            <li class="menu--indent">
               <a href="./index.html" class="menu-item current-page">Студия</a>
             </li>
-            <li class="header--indent-right">
+            <li class="menu--indent">
               <a href="./portfolio.html" class="menu-item">Портфолио</a>
             </li>
-            <li class="header--indent-right">
+            <li class="menu--indent">
               <a href="#" class="menu-item">Контакты</a>
             </li>
           </ul>
         </nav>
-        <ul class="header--alignment header--indent-left">
-          <li class="header--indent-right">
+        <ul class="header__contacts--alignment header__contacts--indent-left">
+          <li class="header__contacts--indent">
             <a href="mailto:info@devstudio.com" class="header-contacts"
               ><svg width="16" height="12" class="header-contacts__icon">
                 <use href="./images/icons.svg#icon-envelope"></use>
@@ -48,7 +61,7 @@
               info@devstudio.com</a
             >
           </li>
-          <li class="header--indent-right">
+          <li class="header__contacts--indent">
             <a href="tel:+380961111111" class="header-contacts"
               ><svg width="10" height="16" class="header-contacts__icon">
                 <use href="./images/icons.svg#icon-cellphone"></use>
@@ -62,10 +75,12 @@
 
     <main>
       <!-- Hero Section -->
-      <section class="hero">
-        <div class="hero--alignment">
-          <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
-          <button data-modal-open type="button" class="hero__button">Заказать услугу</button>
+      <section class="hero--full-size">
+        <div class="hero">
+          <div class="hero--alignment">
+            <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
+            <button data-modal-open type="button" class="hero__button">Заказать услугу</button>
+          </div>
         </div>
       </section>
 
@@ -129,6 +144,7 @@
           <ul class="services--alignment">
             <li class="services__item">
               <img
+                srcset="./images/desktopapp.jpg 1x, ./images/desktopapp@2x.jpg 2x"
                 src="./images/desktopapp.jpg"
                 alt="Разрабатываем десктопные приложения"
                 width="370"
@@ -140,6 +156,7 @@
             </li>
             <li class="services__item">
               <img
+                srcset="./images/mobileapp.jpg 1x, ./images/mobileapp@2x.jpg 2x"
                 src="./images/mobileapp.jpg"
                 alt="Разрабатываем мобильные приложения"
                 width="370"
@@ -151,6 +168,7 @@
             </li>
             <li class="services__item">
               <img
+                srcset="./images/design.jpg 1x, ./images/design@2x.jpg 2x"
                 src="./images/design.jpg"
                 alt="Предоставляем дизайнерские решения"
                 width="370"
@@ -173,8 +191,7 @@
               <img
                 src="./images/igor_demyanenko.jpg"
                 alt="Игорь Демьяненко - Product Designer"
-                width="270"
-                height="260"
+                class="team-member__img"
               />
               <div class="team-member--alignment">
                 <h3 class="team-member__name">Игорь Демьяненко</h3>
@@ -239,8 +256,7 @@
               <img
                 src="./images/olga_repina.jpg"
                 alt="Ольга Репина - Frontend Developer"
-                width="270"
-                height="260"
+                class="team-member__img"
               />
               <div class="team-member--alignment">
                 <h3 class="team-member__name">Ольга Репина</h3>
@@ -305,8 +321,7 @@
               <img
                 src="./images/nikolai_tarasov.jpg"
                 alt="Николай Тарасов - Marketing"
-                width="270"
-                height="260"
+                class="team-member__img"
               />
               <div class="team-member--alignment">
                 <h3 class="team-member__name">Николай Тарасов</h3>
@@ -371,8 +386,7 @@
               <img
                 src="./images/mikhail_ermakov.jpg"
                 alt="Михаил Ермаков - UI Designer"
-                width="270"
-                height="260"
+                class="team-member__img"
               />
               <div class="team-member--alignment">
                 <h3 class="team-member__name">Михаил Ермаков</h3>
@@ -669,5 +683,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

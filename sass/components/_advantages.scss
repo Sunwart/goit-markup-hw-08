@@ -1,25 +1,21 @@
 .advantages--alignment {
   @media screen and(min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: calc(-1 * var(--gap));
-    margin-bottom: calc(-1 * var(--gap));
-  }
-}
-.advantages__item {
-  @media screen and(min-width: 768px) {
-    flex-basis: calc(100% / 2 - var(--gap));
-    margin-bottom: var(--gap);
-    margin-right: var(--gap);
+    display: grid;
+    grid-gap: var(--gap);
+    grid-template-columns: repeat(2, 354px);
   }
 
   @media screen and(min-width: 1200px) {
-    flex-basis: calc(100% / 4 - var(--gap));
+    grid-template-columns: repeat(4, 270px);
   }
 }
 
 .advantages__item:not(:last-child) {
   margin-bottom: var(--gap);
+
+  @media screen and(min-width: 768px) {
+    margin-bottom: 0;
+  }
 }
 
 .advantages__title {

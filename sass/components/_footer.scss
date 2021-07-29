@@ -1,16 +1,65 @@
 .footer {
   background-color: var(--color-dark-bg);
 
-  &--alignment {
-    display: flex;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    &--alignment {
+      display: grid;
+      grid-template-columns: 50% 1fr;
+      grid-template-rows: auto 1fr;
+      grid-template-areas: 'contacts sm-icons' 'subscribe subscribe';
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &--alignment {
+      display: flex;
+    }
   }
 }
 
 .footer--contacts-block {
+  text-align: center;
   padding-top: 60px;
   padding-bottom: 60px;
-  margin-right: 70px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    grid-area: contacts;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 70px;
+    text-align: left;
+  }
 }
+
+.footer--sm-block,
+.footer--subscribe-block {
+  text-align: center;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+    padding-top: 72px;
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer--subscribe-block {
+    grid-area: subscribe;
+  }
+  .footer--sm-block {
+    grid-area: sm-icons;
+    padding-top: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer--sm-block {
+    margin-right: 93px;
+  }
+}
+
 .address {
   color: var(--color-basic);
   font-size: 14px;
@@ -48,12 +97,6 @@
   color: var(--color-basic);
 }
 
-.footer--sm-block {
-  padding-top: 72px;
-  margin-right: 93px;
-  color: var(--color-basic);
-}
-
 .footer-sm-block-item {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
@@ -70,24 +113,34 @@
   }
 }
 
-.footer--subscribe-block {
-  padding-top: 72px;
-  color: var(--color-basic);
-}
 .subscribe-form {
-  display: flex;
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 
   &__email {
-    width: 358px;
+    width: 100%;
     height: 50px;
     background-color: inherit;
     outline: none;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     padding-left: 15px;
-    margin-right: 12px;
     color: var(--color-basic);
     transition: border var(--effect-duration) var(--timing-function);
+
+    @media screen and (min-width: 480px) {
+      width: 450px;
+    }
+
+    @media screen and (max-width: 1199px) {
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+      margin-right: 12px;
+    }
 
     &:focus {
       border: 1px solid var(--color-brand);
@@ -107,6 +160,11 @@
     align-items: center;
     padding-left: 28px;
     padding-right: 28px;
+
+    @media screen and (max-width: 1199px) {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   &__button-icon {

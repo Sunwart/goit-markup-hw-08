@@ -4,14 +4,19 @@
 @import './components/common'; // ++
 @import './components/button'; // ++
 @import './components/logo'; // ++
+
 // @import './components/header';
-@import './components/hero'; // картинки не адаптовані!
+
+@import './components/hero'; // картинки не зжимаються
 @import './components/modalWindow'; // вирівнювання
 @import './components/modalForm'; // ++
+
 @import './components/advantages'; // ++
 @import './components/services'; // ++
 @import './components/team'; // картинки не адаптовані!
 @import './components/clients'; // ++
-// @import './components/footer';
+
+@import './components/footer';
+
 @import './components/portfolioFilters'; // ++
-@import './components/portfolioItems'; // падінги оверлею, картинки не адаптовані, а з них - ширина
+@import './components/portfolioItems'; // картинки не адаптовані
