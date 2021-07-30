@@ -27,38 +27,115 @@
           <a href="./index.html" class="header-logo"
             ><span class="logo--colored">Web</span>Studio</a
           >
-          <ul class="header--alignment">
-            <li class="header--indent-right">
-              <a href="./index.html" class="menu-item">Студия</a>
+          <div class="header--hidden">
+            <ul class="header--alignment">
+              <li class="menu--indent">
+                <a href="./index.html" class="menu-item">Студия</a>
+              </li>
+              <li class="menu--indent">
+                <a href="./portfolio.html" class="menu-item current-page">Портфолио</a>
+              </li>
+              <li class="menu--indent">
+                <a href="#" class="menu-item">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <button type="button" class="burger-btn" data-menu-open>
+          <svg
+            class="mobile-menu__icon"
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use href="./images/menu_icons.svg#icon-menu"></use>
+          </svg>
+        </button>
+
+        <div class="header--hidden header__contacts--indent-left">
+          <ul class="header__contacts--alignment">
+            <li class="header__contacts--indent">
+              <a href="mailto:info@devstudio.com" class="header-contacts"
+                ><svg width="16" height="12" class="header-contacts__icon">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
             </li>
-            <li class="header--indent-right">
-              <a href="./portfolio.html" class="menu-item current-page">Портфолио</a>
-            </li>
-            <li class="header--indent-right">
-              <a href="#" class="menu-item">Контакты</a>
+            <li class="header__contacts--indent">
+              <a href="tel:+380961111111" class="header-contacts"
+                ><svg width="10" height="16" class="header-contacts__icon">
+                  <use href="./images/icons.svg#icon-cellphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="header--alignment header--indent-left">
-          <li class="header--indent-right">
-            <a href="mailto:info@devstudio.com" class="header-contacts"
-              ><svg width="16" height="12" class="header-contacts__icon">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
+        </div>
+      </div>
+
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu__container">
+          <button type="button" class="mobile-menu__close-btn" data-menu-close>
+            <svg
+              class="mobile-menu__icon"
+              width="40"
+              height="40"
+              aria-label="кнопка закрытия мобильного меню"
             >
-          </li>
-          <li class="header--indent-right">
-            <a href="tel:+380961111111" class="header-contacts"
-              ><svg width="10" height="16" class="header-contacts__icon">
-                <use href="./images/icons.svg#icon-cellphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+              <use href="./images/menu_icons.svg#icon-close-menu"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu-list">
+            <li class="mobile-menu-list__item">
+              <a href="./index.html" class="mobile-menu-list__link">Студия</a>
+            </li>
+            <li class="mobile-menu-list__item">
+              <a
+                href="./portfolio.html"
+                class="mobile-menu-list__link mobile-menu-list__link--current"
+                >Портфолио</a
+              >
+            </li>
+            <li class="mobile-menu-list__item">
+              <a href="#" class="mobile-menu-list__link">Контакты</a>
+            </li>
+          </ul>
+          <ul>
+            <li class="mobile-menu__phone--alignment">
+              <a href="tel:+380961111111" class="mobile-menu__phone">+38 096 111 11 11</a>
+            </li>
+            <li class="mobile-menu__email--alignment">
+              <a href="mailto:info@devstudio.com" class="mobile-menu__email">info@devstudio.com</a>
+            </li>
+          </ul>
+          <ul class="sm-list">
+            <li class="sm-list__icon">
+              <a href="#" class="sm-list__link" target="_blank" rel="noopener norefferer"
+                >Instagram</a
+              >
+            </li>
+            <li class="sm-list__icon">
+              <a href="#" class="sm-list__link" target="_blank" rel="noopener norefferer"
+                >Twitter</a
+              >
+            </li>
+            <li class="sm-list__icon">
+              <a href="#" class="sm-list__link" target="_blank" rel="noopener norefferer"
+                >Facebook</a
+              >
+            </li>
+            <li class="sm-list__icon">
+              <a href="#" class="sm-list__link" target="_blank" rel="noopener norefferer"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
+
     <main>
       <section class="section">
         <div class="container">
@@ -89,11 +166,34 @@
             <li class="portfolio-item">
               <a href="#" class="link project-item--link-wrapper">
                 <div class="project-item--img-wrapper">
-                  <img
-                    src="./images/portfolio/technokryak.jpg"
-                    alt="Веб-сайт Технокряк"
-                    class="portfolio-item__img"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/technokryak.jpg    1x,
+                        ./images/portfolio/technokryak@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/technokryak768.jpg    1x,
+                        ./images/portfolio/technokryak768@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 280px)"
+                      srcset="
+                        ./images/portfolio/technokryak480.jpg    1x,
+                        ./images/portfolio/technokryak480@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      src="./images/portfolio/technokryak.jpg"
+                      alt="Веб-сайт Технокряк"
+                      class="portfolio-item__img"
+                    />
+                  </picture>
                   <p class="portfolio-item__description">
                     Технокряк это современная площадка распространения коронавируса. Компании
                     используют эту платформу для цифрового шпионажа и атак на защищённые сервера
@@ -110,11 +210,34 @@
             <li class="portfolio-item">
               <a href="#" class="link project-item--link-wrapper"
                 ><div class="project-item--img-wrapper">
-                  <img
-                    src="./images/portfolio/neworlean_goldenstar.jpg"
-                    alt="Дизайн постера New Orlean vs Golden Star"
-                    class="portfolio-item__img"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/neworlean.jpg    1x,
+                        ./images/portfolio/neworlean@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/neworlean768.jpg    1x,
+                        ./images/portfolio/neworlean768@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 280px)"
+                      srcset="
+                        ./images/portfolio/neworlean480.jpg    1x,
+                        ./images/portfolio/neworlean480@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      src="./images/portfolio/neworlean.jpg"
+                      alt="Дизайн постера New Orlean vs Golden Star"
+                      class="portfolio-item__img"
+                    />
+                  </picture>
                   <p class="portfolio-item__description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, placeat, vel a
                     dolor neque ratione fugiat officia natus odit maiores consequatur voluptatem
@@ -134,11 +257,34 @@
             <li class="portfolio-item">
               <a href="#" class="link project-item--link-wrapper"
                 ><div class="project-item--img-wrapper">
-                  <img
-                    src="./images/portfolio/seafood.jpg"
-                    alt="Приложение ресторана Seafood"
-                    class="portfolio-item__img"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/seafood.jpg    1x,
+                        ./images/portfolio/seafood@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/seafood768.jpg    1x,
+                        ./images/portfolio/seafood768@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 280px)"
+                      srcset="
+                        ./images/portfolio/seafood480.jpg    1x,
+                        ./images/portfolio/seafood480@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      src="./images/portfolio/seafood.jpg"
+                      alt="Приложение ресторана Seafood"
+                      class="portfolio-item__img"
+                    />
+                  </picture>
                   <p class="portfolio-item__description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, placeat, vel a
                     dolor neque ratione fugiat officia natus odit maiores consequatur voluptatem
@@ -156,11 +302,31 @@
             <li class="portfolio-item">
               <a href="#" class="link project-item--link-wrapper"
                 ><div class="project-item--img-wrapper">
-                  <img
-                    src="./images/portfolio/prime.jpg"
-                    alt="Маркетинг проекта Prime"
-                    class="portfolio-item__img"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./images/portfolio/prime.jpg 1x, ./images/portfolio/prime@2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/prime768.jpg    1x,
+                        ./images/portfolio/prime768@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 280px)"
+                      srcset="
+                        ./images/portfolio/prime480.jpg    1x,
+                        ./images/portfolio/prime480@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      src="./images/portfolio/prime.jpg"
+                      alt="Маркетинг проекта Prime"
+                      class="portfolio-item__img"
+                    />
+                  </picture>
                   <p class="portfolio-item__description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, placeat, vel a
                     dolor neque ratione fugiat officia natus odit maiores consequatur voluptatem
@@ -176,11 +342,31 @@
             <li class="portfolio-item">
               <a href="#" class="link project-item--link-wrapper"
                 ><div class="project-item--img-wrapper">
-                  <img
-                    src="./images/portfolio/boxes.jpg"
-                    alt="Приложение проекта Boxes"
-                    class="portfolio-item__img"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./images/portfolio/boxes.jpg 1x, ./images/portfolio/boxes@2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/boxes768.jpg    1x,
+                        ./images/portfolio/boxes768@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 280px)"
+                      srcset="
+                        ./images/portfolio/boxes480.jpg    1x,
+                        ./images/portfolio/boxes480@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      src="./images/portfolio/boxes.jpg"
+                      alt="Приложение проекта Boxes"
+                      class="portfolio-item__img"
+                    />
+                  </picture>
                   <p class="portfolio-item__description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, placeat, vel a
                     dolor neque ratione fugiat officia natus odit maiores consequatur voluptatem
@@ -196,11 +382,34 @@
             <li class="portfolio-item">
               <a href="#" class="link project-item--link-wrapper"
                 ><div class="project-item--img-wrapper">
-                  <img
-                    src="./images/portfolio/inspiration.jpg"
-                    alt="Веб-сайт Inspiration has no Borders"
-                    class="portfolio-item__img"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/inspiration.jpg    1x,
+                        ./images/portfolio/inspiration@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/inspiration768.jpg    1x,
+                        ./images/portfolio/inspiration768@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 280px)"
+                      srcset="
+                        ./images/portfolio/inspiration480.jpg    1x,
+                        ./images/portfolio/inspiration480@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      src="./images/portfolio/inspiration.jpg"
+                      alt="Веб-сайт Inspiration has no Borders"
+                      class="portfolio-item__img"
+                    />
+                  </picture>
                   <p class="portfolio-item__description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, placeat, vel a
                     dolor neque ratione fugiat officia natus odit maiores consequatur voluptatem
@@ -216,11 +425,34 @@
             <li class="portfolio-item">
               <a href="#" class="link project-item--link-wrapper"
                 ><div class="project-item--img-wrapper">
-                  <img
-                    src="./images/portfolio/limited_edition.jpg"
-                    alt="Дизайн издания Limited Edition"
-                    class="portfolio-item__img"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/limited.jpg    1x,
+                        ./images/portfolio/limited@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/limited768.jpg    1x,
+                        ./images/portfolio/limited768@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 280px)"
+                      srcset="
+                        ./images/portfolio/limited480.jpg    1x,
+                        ./images/portfolio/limited480@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      src="./images/portfolio/limited.jpg"
+                      alt="Дизайн издания Limited Edition"
+                      class="portfolio-item__img"
+                    />
+                  </picture>
                   <p class="portfolio-item__description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, placeat, vel a
                     dolor neque ratione fugiat officia natus odit maiores consequatur voluptatem
@@ -238,11 +470,25 @@
             <li class="portfolio-item">
               <a href="#" class="link project-item--link-wrapper"
                 ><div class="project-item--img-wrapper">
-                  <img
-                    src="./images/portfolio/lab.jpg"
-                    alt="Маркетинг проекта LAB"
-                    class="portfolio-item__img"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="./images/portfolio/lab.jpg 1x, ./images/portfolio/lab@2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="./images/portfolio/lab768.jpg 1x, ./images/portfolio/lab768@2x.jpg 2x"
+                    />
+                    <source
+                      media="(min-width: 280px)"
+                      srcset="./images/portfolio/lab480.jpg 1x, ./images/portfolio/lab480@2x.jpg 2x"
+                    />
+                    <img
+                      src="./images/portfolio/lab.jpg"
+                      alt="Маркетинг проекта LAB"
+                      class="portfolio-item__img"
+                    />
+                  </picture>
                   <p class="portfolio-item__description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, placeat, vel a
                     dolor neque ratione fugiat officia natus odit maiores consequatur voluptatem
@@ -258,11 +504,34 @@
             <li class="portfolio-item">
               <a href="#" class="link project-item--link-wrapper"
                 ><div class="project-item--img-wrapper">
-                  <img
-                    src="./images/portfolio/growing_business.jpg"
-                    alt="Приложение Growing Business"
-                    class="portfolio-item__img"
-                  />
+                  <picture>
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/growing.jpg    1x,
+                        ./images/portfolio/growing@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/growing768.jpg    1x,
+                        ./images/portfolio/growing768@2x.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 280px)"
+                      srcset="
+                        ./images/portfolio/growing480.jpg    1x,
+                        ./images/portfolio/growing480@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      src="./images/portfolio/growing.jpg"
+                      alt="Приложение Growing Business"
+                      class="portfolio-item__img"
+                    />
+                  </picture>
                   <p class="portfolio-item__description">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, placeat, vel a
                     dolor neque ratione fugiat officia natus odit maiores consequatur voluptatem
@@ -384,5 +653,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

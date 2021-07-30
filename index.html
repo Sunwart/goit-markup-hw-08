@@ -27,49 +27,110 @@
           <a href="./index.html" class="header-logo"
             ><span class="logo--colored">Web</span>Studio</a
           >
+          <div class="header--hidden">
+            <ul class="header--alignment">
+              <li class="menu--indent">
+                <a href="./index.html" class="menu-item current-page">Студия</a>
+              </li>
+              <li class="menu--indent">
+                <a href="./portfolio.html" class="menu-item">Портфолио</a>
+              </li>
+              <li class="menu--indent">
+                <a href="#" class="menu-item">Контакты</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
 
-          <!-- <button
-            type="button"
-            class="menu-button is-open-menu"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
+        <button type="button" class="burger-btn" data-menu-open>
+          <svg
+            class="mobile-menu__icon"
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
           >
-            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-              <use class="icon-close-menu" href="./images/menu_icons.svg#icon-close-menu"></use>
-              <use class="icon-menu" href="./images/menu_icons.svg#icon-menu"></use>
-            </svg>
-          </button> -->
+            <use href="./images/menu_icons.svg#icon-menu"></use>
+          </svg>
+        </button>
 
-          <ul class="header--alignment">
-            <li class="menu--indent">
-              <a href="./index.html" class="menu-item current-page">Студия</a>
+        <div class="header--hidden header__contacts--indent-left">
+          <ul class="header__contacts--alignment">
+            <li class="header__contacts--indent">
+              <a href="mailto:info@devstudio.com" class="header-contacts"
+                ><svg width="16" height="12" class="header-contacts__icon">
+                  <use href="./images/icons.svg#icon-envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
             </li>
-            <li class="menu--indent">
-              <a href="./portfolio.html" class="menu-item">Портфолио</a>
-            </li>
-            <li class="menu--indent">
-              <a href="#" class="menu-item">Контакты</a>
+            <li class="header__contacts--indent">
+              <a href="tel:+380961111111" class="header-contacts"
+                ><svg width="10" height="16" class="header-contacts__icon">
+                  <use href="./images/icons.svg#icon-cellphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="header__contacts--alignment header__contacts--indent-left">
-          <li class="header__contacts--indent">
-            <a href="mailto:info@devstudio.com" class="header-contacts"
-              ><svg width="16" height="12" class="header-contacts__icon">
-                <use href="./images/icons.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com</a
+        </div>
+      </div>
+
+      <div class="mobile-menu" data-menu>
+        <div class="container mobile-menu__container">
+          <button type="button" class="mobile-menu__close-btn" data-menu-close>
+            <svg
+              class="mobile-menu__icon"
+              width="40"
+              height="40"
+              aria-label="кнопка закрытия мобильного меню"
             >
-          </li>
-          <li class="header__contacts--indent">
-            <a href="tel:+380961111111" class="header-contacts"
-              ><svg width="10" height="16" class="header-contacts__icon">
-                <use href="./images/icons.svg#icon-cellphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+              <use href="./images/menu_icons.svg#icon-close-menu"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu-list">
+            <li class="mobile-menu-list__item">
+              <a href="./index.html" class="mobile-menu-list__link mobile-menu-list__link--current"
+                >Студия</a
+              >
+            </li>
+            <li class="mobile-menu-list__item">
+              <a href="./portfolio.html" class="mobile-menu-list__link">Портфолио</a>
+            </li>
+            <li class="mobile-menu-list__item">
+              <a href="#" class="mobile-menu-list__link">Контакты</a>
+            </li>
+          </ul>
+          <ul>
+            <li class="mobile-menu__phone--alignment">
+              <a href="tel:+380961111111" class="mobile-menu__phone">+38 096 111 11 11</a>
+            </li>
+            <li class="mobile-menu__email--alignment">
+              <a href="mailto:info@devstudio.com" class="mobile-menu__email">info@devstudio.com</a>
+            </li>
+          </ul>
+          <ul class="sm-list">
+            <li class="sm-list__icon">
+              <a href="#" class="sm-list__link" target="_blank" rel="noopener norefferer"
+                >Instagram</a
+              >
+            </li>
+            <li class="sm-list__icon">
+              <a href="#" class="sm-list__link" target="_blank" rel="noopener norefferer"
+                >Twitter</a
+              >
+            </li>
+            <li class="sm-list__icon">
+              <a href="#" class="sm-list__link" target="_blank" rel="noopener norefferer"
+                >Facebook</a
+              >
+            </li>
+            <li class="sm-list__icon">
+              <a href="#" class="sm-list__link" target="_blank" rel="noopener norefferer"
+                >LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -188,11 +249,45 @@
           <h2 class="section-title">Наша команда</h2>
           <ul class="team--alignment">
             <li class="team__item">
-              <img
-                src="./images/igor_demyanenko.jpg"
-                alt="Игорь Демьяненко - Product Designer"
-                class="team-member__img"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/igor_demyanenko.webp 1x, ./images/igor_demyanenko@2x.webp 2x"
+                  type="image/webp" />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/igor_demyanenko.jpg 1x, ./images/igor_demyanenko@2x.jpg 2x" />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/igor_demyanenko768.webp    1x,
+                    ./images/igor_demyanenko768@2x.webp 2x
+                  "
+                  type="image/webp" />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/igor_demyanenko768.jpg    1x,
+                    ./images/igor_demyanenko768@2x.jpg 2x
+                  " />
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/igor_demyanenko480.webp    1x,
+                    ./images/igor_demyanenko480@2x.webp 2x
+                  "
+                  type="image/webp" />
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/igor_demyanenko480.jpg    1x,
+                    ./images/igor_demyanenko480@2x.jpg 2x
+                  " />
+                <img
+                  src="./images/igor_demyanenko480.jpg"
+                  alt="Игорь Демьяненко - Product Designer"
+                  class="team-member__img"
+              /></picture>
               <div class="team-member--alignment">
                 <h3 class="team-member__name">Игорь Демьяненко</h3>
                 <p class="team-member__position">Product Designer</p>
@@ -253,11 +348,33 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                src="./images/olga_repina.jpg"
-                alt="Ольга Репина - Frontend Developer"
-                class="team-member__img"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/olga_repina.webp 1x, ./images/olga_repina@2x.webp 2x"
+                  type="image/webp" />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/olga_repina.jpg 1x, ./images/olga_repina@2x.jpg 2x" />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/olga_repina768.webp 1x, ./images/olga_repina768@2x.webp 2x"
+                  type="image/webp" />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="./images/olga_repina768.jpg 1x, ./images/olga_repina768@2x.jpg 2x" />
+                <source
+                  media="(min-width: 280px)"
+                  srcset="./images/olga_repina480.webp 1x, ./images/olga_repina480@2x.webp 2x"
+                  type="image/webp" />
+                <source
+                  media="(min-width: 280px)"
+                  srcset="./images/olga_repina480.jpg 1x, ./images/olga_repina480@2x.jpg 2x" />
+                <img
+                  src="./images/olga_repina480.jpg"
+                  alt="Ольга Репина - Frontend Developer"
+                  class="team-member__img"
+              /></picture>
               <div class="team-member--alignment">
                 <h3 class="team-member__name">Ольга Репина</h3>
                 <p class="team-member__position">Frontend Developer</p>
@@ -318,11 +435,45 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                src="./images/nikolai_tarasov.jpg"
-                alt="Николай Тарасов - Marketing"
-                class="team-member__img"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/nikolai_tarasov.webp 1x, ./images/nikolai_tarasov@2x.webp 2x"
+                  type="image/webp" />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/nikolai_tarasov.jpg 1x, ./images/nikolai_tarasov@2x.jpg 2x" />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/nikolai_tarasov768.webp    1x,
+                    ./images/nikolai_tarasov768@2x.webp 2x
+                  "
+                  type="image/webp" />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/nikolai_tarasov768.jpg    1x,
+                    ./images/nikolai_tarasov768@2x.jpg 2x
+                  " />
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/nikolai_tarasov480.webp    1x,
+                    ./images/nikolai_tarasov480@2x.webp 2x
+                  "
+                  type="image/webp" />
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/nikolai_tarasov480.jpg    1x,
+                    ./images/nikolai_tarasov480@2x.jpg 2x
+                  " />
+                <img
+                  src="./images/nikolai_tarasov480.jpg"
+                  alt="Николай Тарасов - Marketing"
+                  class="team-member__img"
+              /></picture>
               <div class="team-member--alignment">
                 <h3 class="team-member__name">Николай Тарасов</h3>
                 <p class="team-member__position">Marketing</p>
@@ -383,11 +534,45 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                src="./images/mikhail_ermakov.jpg"
-                alt="Михаил Ермаков - UI Designer"
-                class="team-member__img"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/mikhail_ermakov.webp 1x, ./images/mikhail_ermakov@2x.webp 2x"
+                  type="image/webp" />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="./images/mikhail_ermakov.jpg 1x, ./images/mikhail_ermakov@2x.jpg 2x" />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/mikhail_ermakov768.webp    1x,
+                    ./images/mikhail_ermakov768@2x.webp 2x
+                  "
+                  type="image/webp" />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/mikhail_ermakov768.jpg    1x,
+                    ./images/mikhail_ermakov768@2x.jpg 2x
+                  " />
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/mikhail_ermakov480.webp    1x,
+                    ./images/mikhail_ermakov480@2x.webp 2x
+                  "
+                  type="image/webp" />
+                <source
+                  media="(min-width: 280px)"
+                  srcset="
+                    ./images/mikhail_ermakov480.jpg    1x,
+                    ./images/mikhail_ermakov480@2x.jpg 2x
+                  " />
+                <img
+                  src="./images/mikhail_ermakov480.jpg"
+                  alt="Михаил Ермаков - UI Designer"
+                  class="team-member__img"
+              /></picture>
               <div class="team-member--alignment">
                 <h3 class="team-member__name">Михаил Ермаков</h3>
                 <p class="team-member__position">UI Designer</p>
